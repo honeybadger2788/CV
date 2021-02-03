@@ -27,7 +27,7 @@ header {
     background-size: cover;
     position: absolute;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     width: 100vw;
     height: 20vh;
     display: flex;
@@ -90,6 +90,7 @@ SECCION ABOUT ME
 .aboutMe {
     background: url(./20190608_130017.jpg);
     height: 2000px;
+    width: 100%;
     background-attachment: fixed;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -108,7 +109,7 @@ div.me {
     text-align: center;
 }
 
-h1.me {
+div.me h1 {
     font-family: 'Caveat';
     font-size: 3.5rem;
     color: #FF66C4;
@@ -118,6 +119,7 @@ h1.me {
     background:#2B475E;
     color: #FFD43D;
     font-family: 'Libre Baskerville';
+    line-height: 1.6;
     border-radius: 10px;
     padding: 40px;
     width: 25%;
@@ -126,47 +128,42 @@ h1.me {
     left: 10%;
 }
 
-.arrowScrollDown svg {
-    animation: arrowAnimation 1.5s infinite ease-out;
-}
-
-@keyframes arrowAnimation {
-    0% {
-      transform: translateY(-20px);
-      opacity: 0
-    }
-    30% {
-      opacity: 1
-    }
-    60% {
-      opacity: 1
-    }
-    to {
-      -webkit-transform: translateY(10px);
-      transform: translateY(10px);
-      opacity: 0
-    }
-  }
-
-@media only screen and (max-device-width: 1366px) {
+@media (max-width: 1024px) {
     .parallax {
         background-attachment: scroll;
+    }
+
+    div.me {
+        width: 50%; 
+    }
+
+    div.me h1 {
+        font-size: 2rem;
+    }
+
+    div.me h3 {
+        font-size: 1rem;
+    }
+
+    .aboutMe p {
+        width: 50%;
     }
 }
 
 /*=============================
-SECCION BANNER - FALTA CORREGIR
+SECCION REDES 
 ===============================*/
 
-.banner {
-    content: '';
-    background: url(./banner.png);
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+.instagram {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #2B475E;
+    padding: 40px;
+}
+
+.instagram-media {
+    height: 700px;
 }
 
 /*=============================
@@ -175,12 +172,16 @@ SECCION EXPERIENCIA LABORAL
 
 /* Set a background color */
 .jobExp, .edu {
+    padding-top: 40px;
     background-color: #2B475E;
     font-family: Helvetica, sans-serif;
 }
 
-h1 {
+.jobExp h1, .edu h1, .skills h1{
     text-align: center;
+    background: #FF66C4;
+    padding: 20px 0;
+    padding-bottom: 20px;
 }
 
 h2, p {
@@ -190,21 +191,18 @@ h2, p {
 
 label.webdev{
     color: #2B475E;
+    padding-bottom: 20px;
 }
 
 ul.webdev {
-    display: none;
     margin-top: 20px;
 }
 
 ul.webdev li {
     color: #2B475E;
-    list-style:disc;
+    list-style: disc;
+    line-height: 1.6;
     margin-left: 15px;
-}
-
-#accordition:checked ~ ul.webdev{
-    display: block;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -307,18 +305,18 @@ ul.webdev li {
     }
     
     /* Full-width containers */
-    .container {
+    .container2 {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
     
     /* Make sure that all arrows are pointing leftwards */
-    .container::before {
+    .container2::before {
         left: 60px;
-        border: medium solid white;
+        border: medium solid #FFD43D;
         border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
+        border-color: transparent #FFD43D transparent transparent;
     }
     
     /* Make sure all circles are at the same spot */
@@ -330,4 +328,15 @@ ul.webdev li {
     .right {
         left: 0%;
     }
+}
+
+/*======================
+        FOOTER
+========================*/
+footer {
+    position: absolute;
+    position: fixed;
+    top: 2000px;
+    left: 90vw;
+    z-index: 1;
 }
