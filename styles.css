@@ -95,6 +95,7 @@ section.redes a img {
 @media (max-width: 1024px) {
     header {
         position: static;
+        height: 30vh;
     }
 }
 
@@ -392,4 +393,10 @@ footer {
     left: 90vw;
     bottom: 2%;
     z-index: 2;
+}
+
+@media (max-width: 780px){
+    footer{
+        left: 70vw;
+    }
 }
