@@ -9,8 +9,8 @@
 }
 
 body {
-    font-family: 'Open Sans';
-    color:#FFD43D;  
+    font-family: 'Libre Baskerville';
+    color:#FFD43D;
 }
 
 html {
@@ -25,7 +25,6 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
     position: fixed;
     z-index: 2;
     width: 100vw;
@@ -33,8 +32,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 0;
-    padding-right: 40px;
+    padding: 5px 60px;
 }
 
 input {
@@ -42,7 +40,9 @@ input {
 }
 
 label.burger {
-    margin-left: 20px ;
+    background: #FF66C4;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -59,9 +59,8 @@ label.burger {
     transition: width 0.5s;
     background: #FFD43D;
     position: absolute;
-    top: 100%;
+    top: 20vh;
     margin-left: -100%;
-    z-index: 2;
 }
 
 ul.menu li {
@@ -75,10 +74,10 @@ ul.menu li a {
 }
 
 #burger:checked ~ .menu {
-    width: 250px;
+    width: 200px;
     padding: 0 20px;
     padding-top: 20px;
-    margin-left: 0;
+    margin-left: -60px;
 }
 
 section.redes {
@@ -94,23 +93,15 @@ section.redes a img {
 }
 
 @media (max-width: 1024px) {
-    header {
-        position: static;
-        height: 30vh;
-    }
-}
-
-@media (max-width: 968px){
-    .menu {
-        top: 30vh;
-    }
-    section.redes, label.burger {
+    section.redes {
+        height: max-content;
+        width: 150px;
+        flex-direction: row;
         background: #FF66C4;
         padding: 10px;
         border-radius: 10px;
     } 
 }
-
 
 /*=============================
 SECCION ABOUT ME
@@ -118,7 +109,7 @@ SECCION ABOUT ME
 
 .aboutMe {
     background: url(./20190608_130017.jpg);
-    height: 2000px;
+    height: 1300px;
     width: 100%;
     background-attachment: fixed;
     background-position: bottom;
@@ -133,7 +124,7 @@ div.me {
     padding: 40px;
     width: 25%;
     position: absolute;
-    top: 20%;
+    top: 50vh;
     left: 10%;
     text-align: center;
 }
@@ -142,6 +133,10 @@ div.me h1 {
     font-family: 'Caveat';
     font-size: 3.5rem;
     color: #FF66C4;
+}
+
+div.me h3 {
+    font-family: 'Open Sans';
 }
 
 .aboutMe p {
@@ -174,39 +169,26 @@ div.me h1 {
         position:static;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+        padding: 20px;
         }
 
     div.me h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     div.me h3 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .aboutMe p {
         width: 80%;
+        padding: 20px 40px;
         position:static;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
     }
 }
 
-/*=============================
-SECCION REDES 
-===============================*/
-
-.instagram {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background: #2B475E;
-    padding: 40px;
-}
-
-.instagram-media {
-    height: 700px;
-}
 
 /*=============================
 SECCION EXPERIENCIA Y EDUCACION
@@ -232,20 +214,16 @@ h2, p {
     margin-bottom: 15px;
 }
 
-label.webdev{
-    color: #2B475E;
-    padding-bottom: 20px;
+p {
+    font-family: 'Libre Baskerville';
 }
 
-ul.webdev {
-    margin-top: 20px;
-}
-
-ul.webdev li {
+ul.detail li {
     color: #2B475E;
     list-style: disc;
     line-height: 1.6;
     margin-left: 15px;
+    font-family: 'Libre Baskerville';
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -374,7 +352,7 @@ ul.webdev li {
 }
 
 /*======================
-        SKILLS
+SKILLS
 ========================*/
 
 div.skills {
@@ -387,6 +365,21 @@ div.skills img {
     width: 10%;
 }
 
+/*=============================
+SECCION REDES 
+===============================*/
+
+.instagram {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #2B475E;
+    padding: 40px;
+}
+
+.instagram-media {
+    height: 700px;
+}
 
 /*======================
         FOOTER
