@@ -61,6 +61,7 @@ label.burger {
     position: absolute;
     top: 100%;
     margin-left: -100%;
+    z-index: 2;
 }
 
 ul.menu li {
@@ -89,7 +90,7 @@ section.redes {
 }
 
 section.redes a img {
-    width: 20px;
+    width: 20px; /*probar con 1.5rem si mejora la vista mobile*/
 }
 
 @media (max-width: 1024px) {
@@ -100,6 +101,9 @@ section.redes a img {
 }
 
 @media (max-width: 968px){
+    .menu {
+        top: 30vh;
+    }
     section.redes, label.burger {
         background: #FF66C4;
         padding: 10px;
