@@ -52,7 +52,6 @@ label.burger {
     height: 5px;
     background-color: #FFD43D;
     margin: 6px 0;
-    transition: 0.4s;
 }
 
 .menu {
@@ -97,11 +96,36 @@ section.redes a img {
 }
 
 @media (max-width: 1024px) {
+    header {
+        background-size: content;
+        height: 8vh;
+        padding: 5px 20px;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 20px;
+        height: 5px;
+        background-color: #FFD43D;
+        margin: 3px 0;
+    }
+
+    .menu {
+        top: 8vh;
+    }
+
+    label.burger {
+        padding: 5px 10px;
+    }
+
+    #burger:checked ~ .menu {
+        margin-left: -20px;
+    }
+
     section.redes {
         height: max-content;
         width: 150px;
         flex-direction: row;
-        padding: 10px;
+        padding: 5px 10px;
     } 
 }
 
@@ -126,7 +150,7 @@ div.me {
     padding: 40px;
     width: 25%;
     position: absolute;
-    top: 50vh;
+    top: 30vh;
     left: 10%;
     text-align: center;
 }
@@ -159,18 +183,20 @@ div.me h3 {
         background: none;
         background-attachment: scroll;
         width: 100%;
-        height: 75vh;
+        height: max-content;
         display: flex;
         flex-direction: column;
         justify-content:space-around;
         align-items: center;
-        padding-top: 20vh;
-        padding-bottom: 40px;
+        padding-top: 10vh;
     }
 
     div.me {
         width: 80%;
         padding: 20px;
+        padding-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
         position: static;
         }
 
@@ -184,6 +210,8 @@ div.me h3 {
 
     .aboutMe p {
         width: 80%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
         padding: 20px 40px;
         position: static;
     }
@@ -365,6 +393,11 @@ div.skills img {
     width: 10%;
 }
 
+@media (max-width: 780px){
+    div.skills {
+        padding: 40px 20px;
+}
+
 /*=============================
 SECCION REDES 
 ===============================*/
@@ -373,7 +406,6 @@ SECCION REDES
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background: #2B475E;
     padding: 40px;
 }
 
