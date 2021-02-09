@@ -243,7 +243,6 @@ SECCION EXPERIENCIA Y EDUCACION
     text-align: center;
     background: #FF66C4;
     padding: 20px 0;
-    padding-bottom: 20px;
     margin-bottom: 20px;
 }
 
@@ -388,6 +387,7 @@ ul.detail li {
 @media (max-width: 768px){
     .titulo {
         font-size: 1.5rem;
+        padding: 10px 0;
     }
 }
 
@@ -407,7 +407,7 @@ div.skills img {
 
 @media (max-width: 768px){
     div.skills {
-        padding: 40px 20px;
+        padding: 20px;
     }
 }
 
