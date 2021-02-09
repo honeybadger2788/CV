@@ -94,7 +94,7 @@ section.redes {
 }
 
 section.redes a img {
-    width: 20px; /*probar con 1.5rem si mejora la vista mobile*/
+    width: 15px;
 }
 
 @media (max-width: 1024px) {
@@ -239,7 +239,7 @@ SECCION EXPERIENCIA Y EDUCACION
 }
 
 .titulo {
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     text-align: center;
     background: #FF66C4;
     padding: 20px 0;
@@ -386,8 +386,7 @@ ul.detail li {
 
 @media (max-width: 768px){
     .titulo {
-        font-size: 1.5rem;
-        padding: 10px 0;
+     padding: 10px 0;
     }
 }
 
@@ -434,7 +433,7 @@ SECCION REDES
 .blog img {
     width: 100%;
     margin-bottom: 20px;
-    border: 2px solid #FF66C4;
+    /*border: 2px solid #FF66C4;*/
     border-radius: 10px;
 }
 
@@ -451,7 +450,7 @@ SECCION REDES
     text-decoration: none;
     font-family: 'Open Sans';
     font-weight: bold;
-    background: #FF66C4;
+    background: #FFD43D;
     border-radius: 10px;
     padding: 5px 20px;
 }
@@ -464,14 +463,53 @@ SECCION REDES
     .blog {
         width: 45%;
         margin: 0;
-        padding: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
     }
-    #hidden {
-        display: none;
-    }
+    
     .blog a {
         padding: 5px;
     }
+}
+
+/*=============================
+        SECCION CONTACTO 
+===============================*/
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFD43D;
+    border-radius: 10px;
+    margin: 0 25%;
+    padding: 20px;
+}
+
+.contacto p {
+    text-align: center;
+}
+
+.contacto ul li {
+    color: #2B475E;
+}
+
+.contacto ul li a {
+    color: #2B475E;
+    text-decoration: none;
+}
+
+.download {
+    background: #2B475E;
+    text-decoration: none;
+    color:#FFD43D;
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.download:hover {
+    background: #FF66C4;
 }
 
 /*======================
