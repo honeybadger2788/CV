@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Resume - Carosella N.</title>
+    <link rel="stylesheet" href="./bootstrap-grid.css">
+    <script src="https://kit.fontawesome.com/1283047e01.js" crossorigin="anonymous"></script>
+    <title>Carosella N. - Fullstack Web Dev</title>
 </head>
 <body>
     <div id="top"></div>
-    <header>
+    <header class="container-fluid">
         <input type="checkbox" id="burger" name="burger">
         <label for="burger" class="burger">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+            <i class="fas fa-hamburger fa-2x"></i>
         </label>
         <ul class="menu">
             <li><a href="#aboutMe">Acerca de mi</a></li>
@@ -24,12 +24,12 @@
             <li><a href="#contacto">Contacto</a></li>
         </ul>
         <section class="redes" id="redes">
-            <a href="https://github.com/honeybadger2788"><img src="./github2.png" alt="repo github"></a>
-            <a href="https://twitter.com/JGirlify"><img src="./gorjeo.png" alt="cuenta twitter"></a>
-            <a href="https://www.instagram.com/jgirlify/"><img src="./instagram.png" alt="cuenta instagram"></a>
-            <a href="https://codepen.io/honeybadger2788"><img src="./codepen.png" alt="perfil codepen"></a>
-            <a href="https://www.linkedin.com/in/noeliabcarosella/"><img src="./linkedin.png" alt="perfil linkedin"></a>
-            <a href="mailto:noe.carosella@gmail.com?subject=Contacto"><img src="./email.png" alt="correo electrónico"></a>
+            <a href="https://github.com/honeybadger2788"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://twitter.com/JGirlify"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.instagram.com/jgirlify/"><i class="fab fa-instagram fa-2x"></i></i></a>
+            <a href="https://codepen.io/honeybadger2788"><i class="fab fa-codepen fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/noeliabcarosella/"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="mailto:noe.carosella@gmail.com?subject=Contacto"><i class="fas fa-envelope-square fa-2x"></i></a>
         </section>
     </header>
     <section id="aboutMe" class="aboutMe">
@@ -43,7 +43,7 @@
                 de atención al cliente junto a mi compromiso y responsabilidad para con mi trabajo.
             </p>
         </section>
-        <section id="jobExp" class="jobExp">
+        <section id="jobExp" class="container-fluid p-0">
             <h1 class="titulo">EXPERIENCIA PROFESIONAL</h1>
             <div class="timeline">
                 <div class="container2 left">
@@ -91,7 +91,7 @@
                 </div>
             </div>
         </section>
-        <section id="edu" class="edu">
+        <section id="edu" class="container-fluid p-0">
             <h1 class="titulo">EDUCACIÓN</h1>
             <div class="timeline">
                 <div class="container2 left">
@@ -108,16 +108,15 @@
                 </div>
             </div>
         </section>
-        <section id="skills" class="skills">
+        <section id="skills" class="container-fluid p-0">
             <h1 class="titulo">HABILIDADES</h1>
-            <div class="skills">
-                <img src="./css.png" alt="css">
-                <img src="./github.png" alt="github">
-                <img src="./html-5.png" alt="html">
-                <img src="./javascript.png" alt="javascript">
-                <img src="./mysql.png" alt="mysql">
-                <img src="./nodejs.png" alt="nodejs">
-                <img src="./reaccionar.png" alt="react">
+            <div class="row-md d-flex justify-content-around">
+                <img class="col-md-1 p-3" src="./css.png" alt="css">
+                <img class="col-md-1 p-3" src="./html-5.png" alt="html">
+                <img class="col-md-1 p-3" src="./javascript.png" alt="javascript">
+                <img class="col-md-1 p-3" src="./mysql.png" alt="mysql">
+                <img class="col-md-1 p-3" src="./nodejs.png" alt="nodejs">
+                <img class="col-md-1 p-3" src="./reaccionar.png" alt="react">
             </div>
         </section>
         <h1 class="titulo">BLOG</h1>
@@ -157,10 +156,10 @@
                 <li><a href="https://www.linkedin.com/in/noeliabcarosella/">Linkedin</a></li>
                 <li><a href="mailto:noe.carosella@gmail.com?subject=Contacto">Correo electrónico</a></li>
             </ul>
-            <a class="download" href="./ncarosella.pdf">Descargá mi CV</a>
+            <a href="./ncarosella.pdf" download="CV_Carosella_Noelia" class="download">Descargá mi CV</a>
         </section>
         <footer>
-            <a href="#top"><img class="arrowUp" width="40" src="./up-arrow.png" alt="arrow up"></a>
+            <a href="#top"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
         </footer>
         <div>Iconos diseñados por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
     </body>

@@ -25,18 +25,14 @@ html {
 SECCION MENU
 ===============================*/
 header {
-    background: url(./banner.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #2b475e;
     position: fixed;
     z-index: 2;
     width: 100vw;
-    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 60px;
+    padding: 10px 60px;
 }
 
 input {
@@ -49,12 +45,17 @@ label.burger {
     border-radius: 10px;
 }
 
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #FFD43D;
-    margin: 6px 0;
+.banner {
+    background: url(./banner.png);
+    height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
+
 
 .menu {
     width: 0;
@@ -85,16 +86,26 @@ ul.menu li a {
 
 section.redes {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    height: 100%;
+    width: 25%;
     padding: 10px 20px;
     background: #FF66C4;
     border-radius: 10px;
 }
 
-section.redes a img {
-    width: 15px;
+.fab, .fas {
+    color: black;
+}
+
+.fa-arrow-circle-up {
+    background-color: #FF66C4;
+    color: white;
+    border-radius: 50px;
+}
+
+.fa-hamburger {
+    color: #FFD43D;
 }
 
 @media (max-width: 1024px) {
@@ -122,20 +133,8 @@ section.redes a img {
     #burger:checked ~ .menu {
         margin-left: -20px;
     }
-
-    section.redes {
-        height: max-content;
-        width: 150px;
-        flex-direction: row;
-        padding: 5px 10px;
-    } 
 }
 
-@media (max-width: 786px) {
-    section.redes{
-        display: none;
-    }
-}
 
 /*=============================
 SECCION ABOUT ME
@@ -239,6 +238,7 @@ SECCION EXPERIENCIA Y EDUCACION
 }
 
 .titulo {
+    width: 100%;
     font-size: 1.5rem;
     text-align: center;
     background: #FF66C4;
