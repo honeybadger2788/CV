@@ -9,21 +9,25 @@
     <title>Carosella N. - Fullstack Web Dev</title>
 </head>
 <body>
-    <div id="top"></div>
     <header class="container-fluid">
-        <input type="checkbox" id="burger" name="burger">
-        <label for="burger" class="burger">
-            <i class="fas fa-hamburger fa-2x"></i>
-        </label>
-        <ul class="menu">
-            <li><a href="#aboutMe">Acerca de mi</a></li>
-            <li><a href="#jobExp">Experiencia Laboral</a></li>
-            <li><a href="#edu">Estudios</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#instagram">Redes</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-        <section class="redes" id="redes">
+        <div class="row d-flex justify-content-around">
+            <div class="col">
+                <i class="fas fa-hamburger fa-2x burger" onclick="openNav()"></i>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#aboutMe">Acerca de mi</a>
+                    <a href="#jobExp">Experiencia Laboral</a>
+                    <a href="#edu">Estudios</a>
+                    <a href="#skills">Habilidades</a>
+                    <a href="#instagram">Redes</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+            </div>
+            <div class="col">
+                <span><img class="avatar" src="./myAvatar.png" height="100px" alt=""></span>
+            </div>
+        </div>
+        <section class="col icon-bar" id="redes">
             <a href="https://github.com/honeybadger2788"><i class="fab fa-github fa-2x"></i></a>
             <a href="https://twitter.com/JGirlify"><i class="fab fa-twitter fa-2x"></i></a>
             <a href="https://www.instagram.com/jgirlify/"><i class="fab fa-instagram fa-2x"></i></i></a>
@@ -32,6 +36,7 @@
             <a href="mailto:noe.carosella@gmail.com?subject=Contacto"><i class="fas fa-envelope-square fa-2x"></i></a>
         </section>
     </header>
+    <div id="top"></div>
     <section id="aboutMe" class="aboutMe">
         <div class="me">
             <h1>Noelia Carosella</h1>
@@ -119,6 +124,27 @@
                 <img class="col-md-1 p-3" src="./reaccionar.png" alt="react">
             </div>
         </section>
+        <section id="skills" class="container-fluid p-0">
+            <h1 class="titulo">PORFOLIO</h1>
+            <div class="row-md d-flex justify-content-around pb-3">
+                <div class="porfolio">
+                    <a href="https://playandjoy.herokuapp.com/"><img src="./playandjoy.png" width="300px" alt="Avatar" class="image"></a>
+                    <div class="overlay">Play & Joy ~ E-commerce</div>
+                  </div>
+                  <div class="porfolio">
+                    <a href="https://stickit-note-app.herokuapp.com/"><img src="./stickit.png" width="300px" alt="Avatar" class="image"></a>
+                    <div class="overlay">Stick-it ~ App</div>
+                  </div>
+                  <div class="porfolio">
+                    <a href="https://planetafullstack.herokuapp.com/"><img src="./planetafullstack.png" width="300px" alt="Avatar" class="image"></a>
+                    <div class="overlay">Planeta Full Stack ~ Landing</div>
+                  </div>
+                  <div class="porfolio">
+                    <a href="https://playandjoydashboard.herokuapp.com/"><img src="./playandjoydashboard.png" width="300px" alt="Avatar" class="image"></a>
+                    <div class="overlay">Play & Joy ~ Dashboard</div>
+                  </div>
+            </div>
+        </section>
         <h1 class="titulo">BLOG</h1>
         <section id="instagram" class="instagram">
             <div class="blog">   
@@ -162,5 +188,6 @@
             <a href="#top"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
         </footer>
         <div>Iconos diseñados por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+    <script type="text/javascript" src="./sidebarNav.js"></script>
     </body>
     </html>

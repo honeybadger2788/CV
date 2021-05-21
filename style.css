@@ -3,6 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+:root {
+    --amarillo: #FFD43D;
+    --rosa: #FF66C4;
+    --petroleo: #2b475e;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -39,22 +45,19 @@ input {
     display: none;
 }
 
-label.burger {
+.burger {
     background: #FF66C4;
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
-.banner {
-    background: url(./banner.png);
-    height: 500px;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
 
 
 .menu {
@@ -108,6 +111,80 @@ section.redes {
     color: #FFD43D;
 }
 
+.icon-bar {
+    background: #FF66C4;
+    border-radius: 10px;
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 95vw;
+    webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  /* Style the icon bar links */
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Style the social media icons with color, if you want */
+  .icon-bar a:hover {
+    background-color: var(--amarillo);
+  }
+  
+  .sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 10%; /* Stay at the top */
+    left: 0;
+    background-color: var(--amarillo); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
 @media (max-width: 1024px) {
     header {
         background-size: content;
@@ -133,6 +210,13 @@ section.redes {
     #burger:checked ~ .menu {
         margin-left: -20px;
     }
+
+    .icon-bar {
+        position: static;
+        display: flex;
+        top: 0;
+        left: 0;
+      }
 }
 
 
@@ -409,6 +493,44 @@ div.skills img {
         padding: 20px;
     }
 }
+
+/*=============================
+SECCION PORFOLIO 
+===============================*/
+
+.porfolio {
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+  }
+  
+  /* Make the image to responsive */
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* The overlay effect - lays on top of the container and over the image */
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* When you mouse over the container, fade in the overlay title */
+  .porfolio:hover .overlay {
+    opacity: 1;
+  }
 
 /*=============================
 SECCION REDES 
