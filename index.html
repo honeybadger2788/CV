@@ -10,8 +10,8 @@
 </head>
 <body>
     <header class="container-fluid">
-        <div class="row d-flex justify-content-around">
-            <div class="col">
+        <div class="row d-flex justify-content-between px-5">
+            <div class="col-1">
                 <i class="fas fa-hamburger fa-2x burger" onclick="openNav()"></i>
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -19,22 +19,23 @@
                     <a href="#jobExp">Experiencia Laboral</a>
                     <a href="#edu">Estudios</a>
                     <a href="#skills">Habilidades</a>
-                    <a href="#instagram">Redes</a>
+                    <a href="#porfolio">Porforlio</a>
+                    <a href="#instagram">Blog</a>
                     <a href="#contacto">Contacto</a>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-1">
                 <span><img class="avatar" src="./myAvatar.png" height="100px" alt=""></span>
             </div>
         </div>
-        <section class="col icon-bar" id="redes">
-            <a href="https://github.com/honeybadger2788"><i class="fab fa-github fa-2x"></i></a>
-            <a href="https://twitter.com/JGirlify"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="https://www.instagram.com/jgirlify/"><i class="fab fa-instagram fa-2x"></i></i></a>
-            <a href="https://codepen.io/honeybadger2788"><i class="fab fa-codepen fa-2x"></i></a>
-            <a href="https://www.linkedin.com/in/noeliabcarosella/"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="mailto:noe.carosella@gmail.com?subject=Contacto"><i class="fas fa-envelope-square fa-2x"></i></a>
-        </section>
+            <div class="row icon-bar" id="redes">
+                <a href="https://github.com/honeybadger2788"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://twitter.com/JGirlify"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.instagram.com/jgirlify/"><i class="fab fa-instagram fa-2x"></i></i></a>
+                <a href="https://codepen.io/honeybadger2788"><i class="fab fa-codepen fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/noeliabcarosella/"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="mailto:noe.carosella@gmail.com?subject=Contacto"><i class="fas fa-envelope-square fa-2x"></i></a>
+            </div>
     </header>
     <div id="top"></div>
     <section id="aboutMe" class="aboutMe">
@@ -49,7 +50,9 @@
             </p>
         </section>
         <section id="jobExp" class="container-fluid p-0">
-            <h1 class="titulo">EXPERIENCIA PROFESIONAL</h1>
+            <div class="row">
+                <h1 class="titulo">EXPERIENCIA PROFESIONAL</h1>
+            </div>
             <div class="timeline">
                 <div class="container2 left">
                     <div class="content">
@@ -124,65 +127,71 @@
                 <img class="col-md-1 p-3" src="./reaccionar.png" alt="react">
             </div>
         </section>
-        <section id="skills" class="container-fluid p-0">
+        <section id="porfolio" class="container-fluid p-0">
             <h1 class="titulo">PORFOLIO</h1>
-            <div class="row-md d-flex justify-content-around pb-3">
-                <div class="porfolio">
+            <div class="row-md d-flex justify-content-around p-3">
+                <div class="col-3">
                     <a href="https://playandjoy.herokuapp.com/"><img src="./playandjoy.png" width="300px" alt="Avatar" class="image"></a>
                     <div class="overlay">Play & Joy ~ E-commerce</div>
                   </div>
-                  <div class="porfolio">
+                  <div class="col-3">
                     <a href="https://stickit-note-app.herokuapp.com/"><img src="./stickit.png" width="300px" alt="Avatar" class="image"></a>
                     <div class="overlay">Stick-it ~ App</div>
                   </div>
-                  <div class="porfolio">
+                  <div class="col-3">
                     <a href="https://planetafullstack.herokuapp.com/"><img src="./planetafullstack.png" width="300px" alt="Avatar" class="image"></a>
                     <div class="overlay">Planeta Full Stack ~ Landing</div>
                   </div>
-                  <div class="porfolio">
+                  <div class="col-3">
                     <a href="https://playandjoydashboard.herokuapp.com/"><img src="./playandjoydashboard.png" width="300px" alt="Avatar" class="image"></a>
                     <div class="overlay">Play & Joy ~ Dashboard</div>
                   </div>
             </div>
         </section>
-        <h1 class="titulo">BLOG</h1>
-        <section id="instagram" class="instagram">
-            <div class="blog">   
+        <section id="instagram" class="container-fluid">
+            <div class="row">
+                <h1 class="titulo">BLOG</h1>
+            </div>
+        <div class="row py-5">       
+            <div class="col-md-3 mx-lg-3 my-md-3 card">   
                 <img src="./responsiveDesign.png" alt="">
-                <p>Éste es el proyecto en el que me encuentro trabajando actualmente. 
-                    
-                </p>
+                <p>Éste es el proyecto en el que me encuentro trabajando actualmente. </p>
                 <a href="https://www.instagram.com/p/CKHIWvcD8gS/?utm_source=ig_web_copy_link">LEER MÁS</a>
             </div>
-            <div class="blog">
+            <div class="col-md-3 mx-lg-3 my-md-3 card">
                 <img src="./wireframes.png" alt="">
                 <p>Una de las primeras cosas que debes hacer al querer construir un sitio web es diseñarlo... </p>
                 <a href="https://www.instagram.com/p/CKR_W0npwNE/?utm_source=ig_web_copy_link">LEER MÁS</a>
             </div>
-            <div class="blog">
+            <div class="col-md-3 mx-lg-3 my-md-3 card">
                 <img src="./highlights.png" alt="">
                 <p>¿Qué tener en cuenta al momento de solicitar una página web?</p>
-                <a href="https://www.instagram.com/p/CKXM5bhpmNW/?utm_source=ig_web_copy_link">LEER MÁS</a>
+                <a href="https://www.instagram.com/p/CKXM3bhpmNW/?utm_source=ig_web_copy_link">LEER MÁS</a>
             </div>
-            <div class="blog">
+            <div class="col-md-3 mx-lg-3 my-md-3 card">
                 <img src="./parallaxEffect.png" alt="">
                 <p>El Parallax Scrolling Effect es una tendencia en sitios web en la que el contenido de fondo (es decir, una imagen) se mueve a una velocidad diferente que el contenido de primer plano mientras se desplaza.
                 </p>
                 <a href="https://www.instagram.com/p/CKgs1jvJ49r/?utm_source=ig_web_copy_link">LEER MÁS</a>
             </div>
+        </div>
         </section>
-        <h1 class="titulo" id="contacto">CONTACTO</h1>
-        <section class="contacto">
-            <p>Si te gustó mi trabajo o querés hacerme alguna recomendación, no dudes en contactarme:</p>
-            <ul>
-                <li><a href="https://github.com/honeybadger2788">Github</a></li>
-                <li><a href="https://twitter.com/JGirlify">Twitter</a></li>
-                <li><a href="https://www.instagram.com/jgirlify/">Instagram</a></li>
-                <li><a href="https://codepen.io/honeybadger2788">Codepen</a></li>
-                <li><a href="https://www.linkedin.com/in/noeliabcarosella/">Linkedin</a></li>
-                <li><a href="mailto:noe.carosella@gmail.com?subject=Contacto">Correo electrónico</a></li>
-            </ul>
-            <a href="./ncarosella.pdf" download="CV_Carosella_Noelia" class="download">Descargá mi CV</a>
+        <section class="container-fluid">
+            <div class="row">
+                <h1 class="titulo" id="contacto">CONTACTO</h1>
+            </div>
+            <div class="mx-auto my-5 contacto">
+                <p>Si te gustó mi trabajo o querés hacerme alguna recomendación, no dudes en contactarme:</p>
+                <ul>
+                    <li><a href="https://github.com/honeybadger2788">Github</a></li>
+                    <li><a href="https://twitter.com/JGirlify">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/jgirlify/">Instagram</a></li>
+                    <li><a href="https://codepen.io/honeybadger2788">Codepen</a></li>
+                    <li><a href="https://www.linkedin.com/in/noeliabcarosella/">Linkedin</a></li>
+                    <li><a href="mailto:noe.carosella@gmail.com?subject=Contacto">Correo electrónico</a></li>
+                </ul>
+                <a href="./ncarosella.pdf" download="CV_Carosella_Noelia" class="download">Descargá mi CV</a>
+            </div>
         </section>
         <footer>
             <a href="#top"><i class="fas fa-arrow-circle-up fa-3x"></i></a>

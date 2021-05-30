@@ -18,8 +18,8 @@
 body {
     font-family: 'Open Sans';
     font-weight: normal;
-    color:#FFD43D;
-    background-color: #2b475e;
+    color: var(--amarillo);
+    background-color: var(--petroleo);
     background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%235b7081' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
@@ -31,13 +31,10 @@ html {
 SECCION MENU
 ===============================*/
 header {
-    background-color: #2b475e;
+    background-color: var(--petroleo);
     position: fixed;
     z-index: 2;
     width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 10px 60px;
 }
 
@@ -46,7 +43,7 @@ input {
 }
 
 .burger {
-    background: #FF66C4;
+    background: var(--rosa);
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
@@ -64,7 +61,7 @@ input {
     width: 0;
     height: 100vh;
     transition: width 0.5s;
-    background: #FFD43D;
+    background: var(--amarillo);
     position: absolute;
     top: 20vh;
     margin-left: -100%;
@@ -76,7 +73,7 @@ ul.menu li {
 }
 
 ul.menu li a {
-    color: #2B475E;
+    color: var(--petroleo);
     text-decoration: none;
 }
 
@@ -93,32 +90,31 @@ section.redes {
     justify-content: space-between;
     width: 25%;
     padding: 10px 20px;
-    background: #FF66C4;
+    background: var(--rosa);
     border-radius: 10px;
 }
 
 .fab, .fas {
-    color: black;
+    color: var(--petroleo);
 }
 
 .fa-arrow-circle-up {
-    background-color: #FF66C4;
+    background-color: var(--rosa);
     color: white;
     border-radius: 50px;
 }
 
 .fa-hamburger {
-    color: #FFD43D;
+    color: var(--amarillo);
 }
 
 .icon-bar {
-    background: #FF66C4;
+    background: var(--rosa);
     border-radius: 10px;
     z-index: 2;
     position: fixed;
     top: 50%;
     left: 95vw;
-    webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
@@ -154,7 +150,7 @@ section.redes {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: var(--petroleo);
     display: block;
     transition: 0.3s;
   }
@@ -173,12 +169,6 @@ section.redes {
     margin-left: 50px;
   }
   
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-  #main {
-    transition: margin-left .5s;
-    padding: 20px;
-  }
-  
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -187,15 +177,13 @@ section.redes {
 
 @media (max-width: 1024px) {
     header {
-        background-size: content;
-        height: 8vh;
         padding: 5px 20px;
     }
 
     .bar1, .bar2, .bar3 {
         width: 20px;
         height: 5px;
-        background-color: #FFD43D;
+        background-color: var(--amarillo);
         margin: 3px 0;
     }
 
@@ -236,7 +224,7 @@ SECCION ABOUT ME
 }
 
 div.me {
-    background:#2B475E;
+    background:var(--petroleo);
     border-radius: 10px;
     padding: 40px;
     width: 25%;
@@ -249,7 +237,7 @@ div.me {
 div.me h1 {
     font-family: 'Caveat';
     font-size: 3.5rem;
-    color: #FF66C4;
+    color: var(--rosa);
 }
 
 div.me h3 {
@@ -258,8 +246,8 @@ div.me h3 {
 }
 
 .aboutMe p {
-    background:#2B475E;
-    color: #FFD43D;
+    background:var(--petroleo);
+    color: var(--amarillo);
     font-family: 'Libre Baskerville';
     line-height: 1.6;
     border-radius: 10px;
@@ -318,26 +306,25 @@ SECCION EXPERIENCIA Y EDUCACION
 .jobExp, .edu, .skills {
     padding-top: 40px;
     /*background-color: #2B475E;*/
-    font-family: Helvetica, sans-serif;
+    font-family: 'Helvetica', 'sans-serif';
 }
 
 .titulo {
     width: 100%;
     font-size: 1.5rem;
     text-align: center;
-    background: #FF66C4;
+    background: var(--rosa);
     padding: 20px 0;
-    margin-bottom: 20px;
 }
 
 h2, p {
-    color: #2B475E;
+    color: var(--petroleo);
     margin-bottom: 15px;
 }
 
 
 ul.detail li {
-    color: #2B475E;
+    color: var(--petroleo);
     list-style: disc;
     line-height: 1.6;
     margin-left: 15px;
@@ -355,7 +342,7 @@ ul.detail li {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #FFD43D;
+    background-color: var(--amarillo);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -377,8 +364,8 @@ ul.detail li {
     width: 25px;
     height: 25px;
     right: -17px;
-    background-color: #FF66C4;
-    border: 4px solid #FFD43D;
+    background-color: var(--rosa);
+    border: 4px solid var(--amarillo);
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -403,9 +390,9 @@ ul.detail li {
     width: 0;
     z-index: 1;
     right: 30px;
-    border: medium solid #FFD43D;
+    border: medium solid var(--amarillo);
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #FFD43D;
+    border-color: transparent transparent transparent var(--amarillo);
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -417,9 +404,9 @@ ul.detail li {
     width: 0;
     z-index: 1;
     left: 30px;
-    border: medium solid #FFD43D;
+    border: medium solid var(--amarillo);
     border-width: 10px 10px 10px 0;
-    border-color: transparent #FFD43D transparent transparent;
+    border-color: transparent var(--amarillo) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -430,7 +417,7 @@ ul.detail li {
 /* The actual content */
 .content {
     padding: 20px 30px;
-    background-color: #FFD43D;
+    background-color: var(--amarillo);
     position: relative;
     border-radius: 6px;
 }
@@ -452,9 +439,9 @@ ul.detail li {
     /* Make sure that all arrows are pointing leftwards */
     .container2::before {
         left: 60px;
-        border: medium solid #FFD43D;
+        border: medium solid var(--amarillo);
         border-width: 10px 10px 10px 0;
-        border-color: transparent #FFD43D transparent transparent;
+        border-color: transparent var(--amarillo) transparent transparent;
     }
     
     /* Make sure all circles are at the same spot */
@@ -543,36 +530,35 @@ SECCION REDES
     padding: 40px;
 }
 
-.blog {
-    background: #2B475E;
-    border: 2px solid #FF66C4;
+.card {
+    background: var(--petroleo);
+    border: 2px solid var(--rosa);
     border-radius: 10px;
     padding: 20px 40px;
-    margin: 20px;
-    width: 300px;
+    /*margin: 20px;
+    width: 300px;*/
 }
 
-.blog img {
+.card img {
     width: 100%;
     margin-bottom: 20px;
-    /*border: 2px solid #FF66C4;*/
     border-radius: 10px;
 }
 
-.blog p {
-    color: #FFD43D;
+.card p {
+    color: var(--amarillo);
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 20px;
 }
 
-.blog a {
-    color: #2B475E;
+.card a {
+    color: var(--petroleo);
     text-decoration: none;
     font-family: 'Open Sans';
     font-weight: bold;
-    background: #FFD43D;
+    background: var(--amarillo);
     border-radius: 10px;
     padding: 5px 20px;
 }
@@ -582,14 +568,14 @@ SECCION REDES
         padding: 20px;
         justify-content: space-between;
     }
-    .blog {
+    .card {
         width: 45%;
         margin: 0;
         margin-bottom: 20px;
         padding: 10px;
     }
     
-    .blog a {
+    .card a {
         padding: 5px;
     }
 }
@@ -599,10 +585,11 @@ SECCION REDES
 ===============================*/
 
 .contacto {
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #FFD43D;
+    background: var(--amarillo);
     border-radius: 10px;
     margin: 0 25%;
     padding: 20px;
@@ -613,25 +600,25 @@ SECCION REDES
 }
 
 .contacto ul li {
-    color: #2B475E;
+    color: var(--petroleo);
 }
 
 .contacto ul li a {
-    color: #2B475E;
+    color: var(--petroleo);
     text-decoration: none;
 }
 
 .download {
-    background: #2B475E;
+    background: var(--petroleo);
     text-decoration: none;
-    color:#FFD43D;
+    color:var(--amarillo);
     margin: 20px;
     padding: 10px 20px;
     border-radius: 10px;
 }
 
 .download:hover {
-    background: #FF66C4;
+    background: var(--rosa);
 }
 
 /*======================
